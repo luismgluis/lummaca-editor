@@ -2,7 +2,7 @@
 
 > Editor de código basado en Monaco que puede ser embebido en cualquier aplicación web a través de un iframe con una API de mensajería simple
 
-Inicializa en [https://editor.lummaca.com/](https://editor.lummaca.com).
+Inicializa en [https://editor.auby.io/](https://editor.auby.io).
 
 ## Acerca de
 
@@ -21,7 +21,7 @@ Lummaca Editor es una implementación personalizada basada en [Monaco Editor](ht
 
 ```html
 <iframe
-  src="https://editor.lummaca.com/?code=codigo_inicial&language=javascript&theme=vs-dark"
+  src="https://editor.auby.io/?code=codigo_inicial&language=javascript&theme=vs-dark"
   id="iframe"
 ></iframe>
 ```
@@ -50,7 +50,7 @@ window.addEventListener("message", ({ data }) => {
 
 ## Uso
 
-Para usar Lummaca Editor, simplemente embebe la URL https://editor.lummaca.com/ en un iframe.
+Para usar Lummaca Editor, simplemente embebe la URL https://editor.auby.io/ en un iframe.
 
 Hay dos formas principales de configurar y comunicarse con el editor:
 
