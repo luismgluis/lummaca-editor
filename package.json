@@ -7,7 +7,15 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "firebase deploy --only hosting"
+    "service:install": "sudo cp ./lummaca-editor.service /etc/systemd/system/lummaca-editor.service && sudo systemctl daemon-reload && sudo systemctl enable lummaca-editor.service",
+    "service:start": "sudo systemctl start lummaca-editor.service",
+    "service:stop": "sudo systemctl stop lummaca-editor.service",
+    "service:restart": "sudo systemctl restart lummaca-editor.service",
+    "service:status": "sudo systemctl status lummaca-editor.service",
+    "service:logs": "sudo journalctl -u lummaca-editor.service -f",
+    "service:logs:tail": "sudo journalctl -u lummaca-editor.service -n 200 --no-pager",
+    "deploy": "yarn build && sudo systemctl restart lummaca-editor.service && sudo systemctl status lummaca-editor.service --no-pager",
+    "deploy:firebase": "firebase deploy --only hosting"
   },
   "dependencies": {
     "@types/node": "^18.15.5",

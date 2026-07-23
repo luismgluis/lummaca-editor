@@ -1,0 +1,16 @@
+[Unit]
+Description=Lummaca Editor (Vite Dev Server)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/dev/lummaca/lummaca-editor
+Environment=NODE_ENV=development
+Environment=VITE_PORT=4920
+ExecStart=/usr/bin/npm run dev -- --host 0.0.0.0
+Restart=always
+RestartSec=5
+MemoryMax=256M
+
+[Install]
+WantedBy=multi-user.target

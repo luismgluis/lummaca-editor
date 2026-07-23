@@ -6,8 +6,8 @@ console.log(monacoEditorPlugin)
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
-  const parsedPort = Number(env.VITE_PORT ?? env.PORT ?? 5173);
-  const port = Number.isFinite(parsedPort) ? parsedPort : 5173;
+  const parsedPort = Number(env.VITE_PORT ?? env.PORT ?? 4920);
+  const port = Number.isFinite(parsedPort) ? parsedPort : 4920;
 
   return {
     plugins: [
